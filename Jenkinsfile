@@ -1,6 +1,6 @@
 pipeline {
   agent any
-        environment {
+        vars: {
         
        ansible_python_interpreter: /usr/bin/python3
        
