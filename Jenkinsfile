@@ -25,7 +25,7 @@ pipeline {
       steps {
         sh """
         
-        /usr/bin/ansible-playbook playbook: 'main.yaml', inventory: 'inventory'
+        /usr/bin/ansible-playbook: 'main.yaml', inventory: 'inventory'
         """
       }
     }
