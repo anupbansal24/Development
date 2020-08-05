@@ -1,14 +1,21 @@
 ---
 - name: Deploy
-  hosts: [localhost]
+  hosts: localhost
   gather_facts: false
   vars:
     ansible_python_interpreter: /usr/bin/python2
     application: nginxblue
   tasks:
     - name: create instances
-      include_role: 
-        name: create_instance
+      ec2:
+        key_name: aws_instance_Ansible
+        instance_type: t2.micro
+        image: ami-0e342d72b12109f91
+        region: us-west-2
+        wait: yes
+        count: 1
+        vpc_subnet_id: default
     - name: setup DNS
-      include_role:
-        name: route53
+        name: test.com
+        
+        
