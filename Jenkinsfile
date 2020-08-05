@@ -1,7 +1,8 @@
 pipeline {
   agent any
         environment {
-        PATH = "/usr/bin::$PATH"
+        
+       ansible_python_interpreter: /usr/bin/python3
        
      }
   stages {
