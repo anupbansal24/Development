@@ -1,5 +1,9 @@
 pipeline {
   agent any
+        environment {
+        PATH = "/usr/bin::$PATH"
+        ANS_HOME = tool('ansible')
+     }
   stages {
     stage('AWS Credentials') {
       steps {
