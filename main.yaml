@@ -8,7 +8,7 @@
   tasks:
     - name: create instances
       ec2:
-        key_name: aws_instance_Ansible
+        key_name: BansalEC2
         instance_type: t2.micro
         image: ami-0e342d72b12109f91
         region: us-west-2
