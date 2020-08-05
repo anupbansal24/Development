@@ -21,6 +21,7 @@ pipeline {
       steps {
         sh """
         ansiblePlaybook playbook: 'main1.yaml', inventory: 'inventory'
+        """
       }
     }
   }
