@@ -1,8 +1,6 @@
 pipeline {
   agent any
-        vars: 
-        
-       ansible_python_interpreter: /usr/bin/python3
+      
        
      
   stages {
